@@ -9,28 +9,8 @@ import static org.junit.Assert.assertArrayEquals;
 
 public class ArraysLeftRotation {
 
-    private static int[] leftRotate(int[] arr, int size, int times) {
-
-        int[] result = new int[size];
-
-        for (int i = 0; i < size; i++) {
-
-            int s1 = (i - times) % size;
-
-            if (s1 < 0) {
-
-                s1 = size - Math.abs(s1);
-            }
-
-            result[s1] = arr[i];
-
-        }
-
-        return result;
-    }
-
     @Test
-    public void ArraysLeftRotationu() {
+    public void ArraysLeftRotationTest() {
 
         ByteArrayInputStream in = new ByteArrayInputStream("5 1 1 2 3 4 5".getBytes());
 
@@ -54,6 +34,26 @@ public class ArraysLeftRotation {
             System.out.print(i + " ");
 
         }
+    }
+
+    private static int[] leftRotate(int[] arr, int size, int times) {
+
+        int[] result = new int[size];
+
+        for (int i = 0; i < size; i++) {
+
+            int s1 = (i - times) % size;
+
+            if (s1 < 0) {
+
+                s1 = size - Math.abs(s1);
+            }
+
+            result[s1] = arr[i];
+
+        }
+
+        return result;
     }
 
 }
