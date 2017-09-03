@@ -7,6 +7,8 @@ import java.util.Scanner;
 
 import static org.junit.Assert.assertArrayEquals;
 
+// https://www.hackerrank.com/challenges/ctci-array-left-rotation
+
 public class ArraysLeftRotation {
 
     @Test
@@ -29,11 +31,6 @@ public class ArraysLeftRotation {
         int[] expectedArr = {2, 3, 4, 5, 1};
 
         assertArrayEquals(expectedArr, arr);
-
-        for (int i : arr) {
-            System.out.print(i + " ");
-
-        }
     }
 
     private static int[] leftRotate(int[] arr, int size, int times) {
