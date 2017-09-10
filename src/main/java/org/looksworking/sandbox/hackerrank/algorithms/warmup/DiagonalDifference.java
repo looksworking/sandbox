@@ -35,10 +35,10 @@ public class DiagonalDifference {
         for (int i = 0; i < arrLength; i++) {
             for (int k = 0; k < arrLength; k++) {
                 if (i == k) {
-                    sumx = sumx + arr[i][k];
+                    sumx += arr[i][k];
                 }
                 if (k == arrLength - i - 1) {
-                    sumy = sumy + arr[i][k];
+                    sumy += arr[i][k];
                 }
             }
         }
