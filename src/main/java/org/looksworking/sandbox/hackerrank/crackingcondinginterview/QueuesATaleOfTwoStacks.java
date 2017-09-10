@@ -43,33 +43,33 @@ public class QueuesATaleOfTwoStacks {
         assertEquals(expected, peeked[0]);
         assertEquals(expected, peeked[1]);
     }
-}
 
-class MyQueue<T>{
+    class MyQueue<T>{
 
-    private Stack<T> fifo = new Stack<>();
-    private Stack<T> lifo = new Stack<>();
+        private Stack<T> fifo = new Stack<>();
+        private Stack<T> lifo = new Stack<>();
 
-    public void enqueue(T element){
-        lifo.push(element);
-    }
+        public void enqueue(T element){
+            lifo.push(element);
+        }
 
-    public void dequeue(){
-        prepareNewStack();
-        fifo.pop();
+        public void dequeue(){
+            prepareNewStack();
+            fifo.pop();
 
-    }
+        }
 
-    public T peek(){
-        prepareNewStack();
-        return fifo.peek();
+        public T peek(){
+            prepareNewStack();
+            return fifo.peek();
 
-    }
+        }
 
-    private void prepareNewStack(){
-        if (fifo.empty()){
-            while (!lifo.empty()){
-                fifo.push(lifo.pop());
+        private void prepareNewStack(){
+            if (fifo.empty()){
+                while (!lifo.empty()){
+                    fifo.push(lifo.pop());
+                }
             }
         }
     }
