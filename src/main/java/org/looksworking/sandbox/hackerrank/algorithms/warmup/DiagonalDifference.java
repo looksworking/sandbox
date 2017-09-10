@@ -26,9 +26,6 @@ public class DiagonalDifference {
             }
         }
 
-        int[] diag1 = new int[arrLength];
-        int[] diag2 = new int[arrLength];
-
         int sumx = 0;
         int sumy = 0;
 
