@@ -46,9 +46,10 @@ public class LinkedListsDetectACycle {
 
         return result;
     }
-}
 
-class Node {
-    int data;
-    Node next;
+
+    class Node {
+        int data;
+        Node next;
+    }
 }
