@@ -38,12 +38,12 @@ public class UnorderedIntArray implements IntArray {
 
     @Override
     public boolean delete(int element) {
-        int position = find(element);
-        if (position == size) {
+        int index = find(element);
+        if (index == size) {
             return false;
         }
-        while (position != size) {
-            array[position] = array[++position];
+        while (index != size) {
+            array[index] = array[++index];
         }
         size--;
         return true;
@@ -56,6 +56,11 @@ public class UnorderedIntArray implements IntArray {
             sb.append(" ").append(array[i]);
         }
         return sb.toString();
+    }
+
+    @Override
+    public int get(int index) {
+        return array[index];
     }
 
     @Test
@@ -77,11 +82,11 @@ public class UnorderedIntArray implements IntArray {
 
         Assert.assertEquals(4, unordArr.find(88));
 
-        Assert.assertEquals(true, unordArr.delete(11));
+        Assert.assertTrue(unordArr.delete(11));
 
         Assert.assertEquals(8, unordArr.size());
 
-        Assert.assertEquals(false, unordArr.delete(11));
+        Assert.assertFalse(unordArr.delete(11));
         System.out.println(unordArr);
     }
 }

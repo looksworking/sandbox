@@ -6,5 +6,6 @@ public interface IntArray {
     int find(int element);
     int insert(int element);
     boolean delete(int element);
+    int get(int index);
 
 }
