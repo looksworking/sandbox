@@ -1,5 +1,13 @@
 package org.looksworking.sandbox.misc;
 
+import org.junit.Test;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+import java.util.stream.IntStream;
+
 public class IpTest {
     public static void main(String[] args) {
         System.out.println(check("192.168.15.7", "192.168.17.1/12"));

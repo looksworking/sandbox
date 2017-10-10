@@ -2,7 +2,7 @@ package org.looksworking.sandbox.misc;
 
 import org.junit.Test;
 
-public class BackwardArrayList {
+public class BackwardLinkedList {
 
     class Node {
 
